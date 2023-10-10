@@ -1,0 +1,78 @@
+#################################
+# Port Number
+#################################
+server:
+  port: 80
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+
+spring:
+  banner:
+    location: banner/banner.txt
+
+  application:
+    name: asd
+
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true
+
+  thymeleaf:
+    cache: true
+    encoding: UTF-8
+
+  #################################
+  # MySQL Setting
+  #################################
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/chatbot?serverTimezone=UTC
+    username: root
+    password: 887900
+
+  #################################
+  # JPA Setting
+  #################################
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+  #json?? ??
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+
+
+#
+#  ###############################
+#  # Security User ??? ?? ??
+#  ###############################
+#  security:
+#    user:
+#      name: test@test.com
+#      password: 1111
+
+###############################
+# Log info
+###############################
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql: trace
