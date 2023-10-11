@@ -31,10 +31,10 @@ spring:
   # MySQL Setting
   #################################
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/chatbot?serverTimezone=UTC
-    username: root
-    password: 887900
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/chatbot
+    username: postgres
+    password: '@dudgh0830'
 
   #################################
   # JPA Setting
@@ -46,10 +46,11 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
     show-sql: true
+    database: postgresql
     properties:
       hibernate:
         format_sql: true
-    database-platform: org.hibernate.dialect.MySQL8Dialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
 
   #json?? ??
   jackson:

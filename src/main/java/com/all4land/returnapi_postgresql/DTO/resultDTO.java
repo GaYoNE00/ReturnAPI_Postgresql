@@ -1,4 +1,4 @@
-package com.example.returnapi_postgresql.DTO;
+package com.all4land.returnapi_postgresql.DTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,9 +11,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class resultDTO {
     private Long rid;
-    private Long cid;
-    private Long aid;
+    private String category ;
     private String action;
+    private String intent;
     private String detail;
     private String urllink;
     private String urlcall;

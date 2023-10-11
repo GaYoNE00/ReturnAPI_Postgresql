@@ -1,7 +1,7 @@
-package com.example.returnapi_postgresql.Controller;
+package com.all4land.returnapi_postgresql.Controller;
 
-import com.all4land.asd.DTO.resultDTO;
-import com.all4land.asd.Service.ChatService;
+import com.all4land.returnapi_postgresql.DTO.resultDTO;
+import com.all4land.returnapi_postgresql.Service.ChatService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
